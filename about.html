@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josefa Pérez - Diseñadora Integral - Industrial</title>
+    <link href="style.css" rel="stylesheet"/>
+
+     <!-- Grafico -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+   
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="header">
+            <h1>JOSEFA PÉREZ</h1>
+            <p>Diseñadora Integral - Industrial</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html" >Portafolio</a>
+            <a href="about.html" class="active">Sobre mí</a>
+        </nav>
+
+        <!-- About Section -->
+        <section class="gallery">
+            <div class="container">
+
+         <!-- Imagen de perfil -->
+                <div style="text-align: center; margin-bottom:50px;">
+                <img src="img/perfil.jpg" alt="Foto Josefa Pérez" style="max-width:650px; width:100%;">
+
+                </div>
+                
+        
+               <!--Texto sobre mí -->
+               <h2>Sobre mí</h2>
+
+               <p>
+               Soy Josefa Pérez, diseñadora integral con enfoque en el desarrollo de
+               proyectos industriales.Mi propósito es lograr un equilibrio entre estética y funcionalidad, desarrollando propuestas que optimicen el uso y, al mismo tiempo, generen experiencias significativas, aportando valor tanto a las personas como a los entornos en los que se aplican.Durante mi formación y experiencia he trabajado en áreas como diseño gráfico, industrial, textil, investigación y diseño web, lo que me permite adaptarme a distintos desafíos creativos.
+
+               </p>
+
+               <br>
+
+               <h2>Proyectos completados</h2>
+               <canvas id="miGrafico" class="grafico"></canvas>
+
+
+              </div>
+              </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Josefa Pérez. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/josefa-p%C3%A9rez-41b08435b/">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+   <!-- Grafico -->
+    <script>
+     const ctx = document.getElementById('miGrafico').getContext('2d');
+
+const datos = {
+    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto' , 'Septiembre', 'Octubre'], // meses
+    datasets: [{
+        label: 'Proyectos completados',
+        data: [0, 1, 2, 3, 2, 2, 0, 0, 2, 0], // número de proyectos por mes
+        borderColor: 'rgb(75, 192, 192)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        tension: 0.3,
+        fill: true,
+        pointBackgroundColor: 'rgb(75, 192, 192)'
+    }]
+};
+
+const config = {
+    type: 'line',
+    data: datos,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { position: 'top' },
+            title: {
+                display: true,
+            }
+        },
+        scales: { y: { beginAtZero: true } }
+    },
+};
+
+const miGrafico = new Chart(ctx, config);
+    </script>
+</body>
+</html>
+    <script src="portafolio.js"></script>
+</body>
+</html>
