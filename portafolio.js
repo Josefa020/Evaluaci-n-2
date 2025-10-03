@@ -4,7 +4,7 @@ const trabajos = [
     {
         nombre: "De pétalo a flor",
         imagen: "img/imagen 1.jpg",
-        calificacion: "Estrategico"
+        calificacion: "Estratégico"
     },
     {
         nombre: "Noctu",
@@ -19,7 +19,7 @@ const trabajos = [
     {
         nombre: "Chile en 7 pilares",
         imagen: "img/imagen 4.jpg",
-        calificacion: "Estrategico"
+        calificacion: "Estratégico"
     },
     {
         nombre: "Microondas",
